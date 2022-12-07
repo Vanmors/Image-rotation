@@ -23,6 +23,7 @@ typedef struct bmp_header {
 
 struct pixel { uint8_t b, g, r; };
 
-uint64_t getPadding(bmp_header *bmpFile);
+void saveFile(bmp_header *bmpHeader, char *fname);
+//uint64_t getPadding(bmp_header *bmpFile);
 bmp_header* loadBMPFile(char* fname);
 void freeBMPFile(bmp_header* bmp_file);
