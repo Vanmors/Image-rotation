@@ -12,7 +12,6 @@ struct image rotate(image const source) {
         for (size_t j = 0; j < source.width; ++j) {
             transform.data[source.height * j + source.height - i - 1] = source.data[source.width * i + j];
         }
-
     }
     return (struct image) {.height = source.width, .width = source.height, .data = transform.data};;
 
